@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    
+    background-color: rgb(163, 161, 161);
+}
+
+.java{
+display: inline-flex;
+
+margin: 200px auto;
+padding: 0;
+    
+
+}
+.text{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-size: 130px;
+    color: rgb(190, 67, 36);
+}
+
+
+
+@media  (max-width:720px) {
+    .text{
+        font-size: 50px;   
+    }
+}
+@media  (max-width:720px){
+.java{margin: 150px auto;}
+}
+
+@media  (max-width:375px) {
+    .text{
+        font-size: 30px;   
+    }
+}
+@media  (max-width:375px){
+.java{margin: 200px auto;}
+}
