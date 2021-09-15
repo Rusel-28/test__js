@@ -238,45 +238,70 @@
 var data = confirm("я могу задать пару вопросов для проверки работы программы?")
     
 if(data){
-    var name = prompt("Как вас завут?");
+    var name = prompt("Как вас зовут?");
+    if (name.length < 10) {
+        console.log("ok");
+    };
+    while (name.length > 10) {
+        alert("Ну очень длинное имя, давай еще раз!!!");
+        var name = prompt("Как вас зовут?");
+    };
+    
 }
-
 
 if(data){
         var let = prompt("скажите сколько вам лет?");
-        if(let <= 23 ){
-            alert("Вам " + let + "?" + " Вы так молоды)");
-    }
-        if(let > 23 ){
-        alert("Вам " + let + "?" + " Вы так стары)");
-}
-        else if (confirm("ERROR"));
-} 
-    else{
-        data = false;
-    };
+        while (let.replace (/\d/g, '').length){
+            alert ('Введите цифры!!!  Пример: "16"');
+            var let = prompt("скажите сколько вам лет?");
+        }
+        if(let > 0){
+            while(let > 100){
+                alert("столько не живут, давай еще раз!!! ");
+                var let = prompt("скажите сколько вам лет?");
+            }
+            if(let){
+                
+            }
+        }
+        
+        
+        while(let < 0){
+                alert("ты еще не родился, давай еще раз!!! ");
+                var let = prompt("скажите сколько вам лет?");
+            }
+        alert("Ok!  Вам " + let + " !" );
+        
+};
         
 
 if(data){
     alert("еще один вопросик)");
     var vremia = prompt("до скольки работаешь?");
         
-            if(  vremia <=17){
-                alert("так рано до " + vremia);
-            }  
-            if (  vremia > 17){
-                alert("так поздно до " + vremia);
-            }  
-            else  {
-                confirm("ERROR");
-            };
-}
+            
+    while ( vremia >= 25.00 || vremia.length > 5 ){
+        alert ('Введите время ПРАВИЛЬНО!!!  Пример: "15.00"');
+        var vremia = prompt("до скольки работаешь?");
+        if(vremia > 0 || vremia < 25);
+    } 
+
+
+                
+            
+                if(  vremia <= 17.00){
+                    alert("так рано до " + vremia);
+                    
+                    
+                }
+            
+                else if (  vremia > 17.00){
+                    alert("так поздно до " + vremia);
+                    
+                };
+            
+};
 
 if(data){
-    alert("Ваше имя " + name + ", вам " + let + " лет" + " и работаете до " + vremia + "!!!")
+    alert("Ваше имя " + name + ", вам " + let + " и вы работаете до " + vremia + " !" )
 }
-
-
-
-
-
